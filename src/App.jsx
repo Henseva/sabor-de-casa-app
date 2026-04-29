@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Home, Search, ShoppingBag, Heart, User, Bell, Menu, Plus, Star, Clock } from "lucide-react";
 
-const heroImg = "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=95";
-const marmitaImg = "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1200&q=95";
-const stewImg = "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=95";
+const heroImg = "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1200&q=95";
+const marmitaImg = "https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=1200&q=95";
+const stewImg = "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=95";
 const pastaImg = "https://images.unsplash.com/photo-1619895092538-128341789043?auto=format&fit=crop&w=900&q=95";
 
 const categories = [["Pratos","🍲"],["Marmitas","🍱"],["Lanches","🍔"],["Bebidas","🥤"]];
@@ -22,12 +22,7 @@ export default function App() {
 }
 
 function Logo() {
-  return (
-    <div className="brand">
-      <div className="brand-mark">🍲</div>
-      <div className="brand-name">Sabor<br /><span>de Casa</span></div>
-    </div>
-  );
+  return <div className="brand"><div className="brand-mark">🍲</div><div className="brand-name">Sabor<br /><span>de Casa</span></div></div>;
 }
 
 function PremiumHome({ setScreen }) {
@@ -46,17 +41,13 @@ function PremiumHome({ setScreen }) {
       </section>
 
       <button className="hero-card" onClick={() => setScreen("menu")}>
-        <div className="hero-text">
-          <p>Feito</p><p>com amor</p><p>pra você!</p><span>— ♥ —</span>
-        </div>
+        <div className="hero-text"><p>Feito</p><p>com amor</p><p>pra você!</p><span>— ♥ —</span></div>
         <div className="hero-image-wrap"><img src={heroImg} alt="Marmita caseira premium" /></div>
       </button>
 
       <TitleRow title="Categorias" />
       <section className="category-grid">
-        {categories.map(([label, icon]) => (
-          <button key={label} className="category"><span>{icon}</span><p>{label}</p></button>
-        ))}
+        {categories.map(([label, icon]) => <button key={label} className="category"><span>{icon}</span><p>{label}</p></button>)}
       </section>
 
       <button className="daily-card" onClick={() => setScreen("details")}>
@@ -98,13 +89,5 @@ function TitleRow({ title }) {
 
 function BottomNav({ screen, setScreen }) {
   const items = [["home","Início",Home],["menu","Buscar",Search],["orders","Pedidos",ShoppingBag],["favorites","Favoritos",Heart],["account","Conta",User]];
-  return (
-    <nav className="bottom-nav">
-      {items.map(([id,label,Icon]) => (
-        <button key={id} className={screen===id ? "active" : ""} onClick={() => setScreen(id)}>
-          <Icon size={18} /><span>{label}</span>
-        </button>
-      ))}
-    </nav>
-  );
+  return <nav className="bottom-nav">{items.map(([id,label,Icon]) => <button key={id} className={screen===id ? "active" : ""} onClick={() => setScreen(id)}><Icon size={18} /><span>{label}</span></button>)}</nav>;
 }
