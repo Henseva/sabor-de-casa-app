@@ -11,6 +11,15 @@ body,
 
 body {
   background: #11140d;
+  overflow-x: hidden;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .appShell {
@@ -20,12 +29,78 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  overflow-x: hidden;
 }
 
-.screenReference {
+.phoneStage {
+  position: relative;
   width: 100%;
   max-width: 430px;
+  min-height: 100vh;
+  background: #11140d;
+  overflow: hidden;
+}
+
+.screenImage {
+  width: 100%;
   height: auto;
   display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.hotspot {
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+}
+
+/* Bottom nav invisible hit areas */
+.navHome {
+  left: 0%;
+  bottom: 0%;
+  width: 20%;
+  height: 11%;
+}
+
+.navSearch {
+  left: 20%;
+  bottom: 0%;
+  width: 20%;
+  height: 11%;
+}
+
+.navOrders {
+  left: 40%;
+  bottom: 0%;
+  width: 20%;
+  height: 11%;
+}
+
+.navFavs {
+  left: 60%;
+  bottom: 0%;
+  width: 20%;
+  height: 11%;
+}
+
+.navAccount {
+  left: 80%;
+  bottom: 0%;
+  width: 20%;
+  height: 11%;
+}
+
+/* Product/card click zones */
+.openDetails {
+  left: 7%;
+  top: 38%;
+  width: 86%;
+  height: 24%;
+}
+
+.backHome {
+  left: 0%;
+  top: 0%;
+  width: 22%;
+  height: 12%;
 }
