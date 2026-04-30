@@ -11,32 +11,21 @@ body,
 
 body {
   background: #11140d;
-  overflow-x: hidden;
 }
 
-.app-shell {
+.appShell {
   width: 100%;
   min-height: 100vh;
   background: #11140d;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  overflow-x: hidden;
 }
 
-.mockup-stage {
+.homeReference {
   width: 100%;
   max-width: 430px;
-  min-height: 100vh;
-  background: #efe2c4;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  overflow: hidden;
-}
-
-.home-reference {
-  width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;
 }
