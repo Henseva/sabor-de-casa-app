@@ -5,10 +5,8 @@ import homeReference from "./assets/home-reference.png";
 
 function App() {
   return (
-    <main className="app-shell">
-      <section className="mockup-stage">
-        <img className="home-reference" src={homeReference} alt="Sabor de Casa Home" />
-      </section>
+    <main className="appShell">
+      <img className="homeReference" src={homeReference} alt="Sabor de Casa Home" />
     </main>
   );
 }
