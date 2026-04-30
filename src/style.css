@@ -104,3 +104,67 @@ button {
   width: 22%;
   height: 12%;
 }
+
+.home {
+  background: #f5e8d8;
+  min-height: 100vh;
+  padding: 16px;
+  font-family: sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.welcome h1 {
+  font-size: 22px;
+  margin: 4px 0;
+}
+
+.banner {
+  background: #d8c3a5;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.categories {
+  display: flex;
+  gap: 10px;
+}
+
+.categories div {
+  background: #e5d1b8;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  margin-top: 16px;
+}
+
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  padding: 10px;
+}
