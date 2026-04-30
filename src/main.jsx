@@ -1,12 +1,12 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
-import homeReference from "./assets/home-reference.png";
+import cardapioReference from "./assets/cardapio-reference.png";
 
 function App() {
   return (
     <main className="appShell">
-      <img className="homeReference" src={homeReference} alt="Sabor de Casa Home" />
+      <img className="screenReference" src={cardapioReference} alt="Sabor de Casa Cardápio" />
     </main>
   );
 }
